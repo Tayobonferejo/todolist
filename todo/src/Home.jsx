@@ -4,7 +4,7 @@ import Create  from './Create.jsx'
 function Home() {
     const [todos ,setTodos] = useState([])
     return (
-        <div>
+        <div className="home">
             <h2>todo list</h2>
             <Create></Create>
             {
