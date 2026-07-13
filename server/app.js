@@ -16,7 +16,12 @@
    .catch((error) => {
       console.error("connection Error")
    });
-
+ 
+ app.get("/get", (request, response) => {
+   todoModel.find()
+   .then(result => response.json(result))
+   .catch(err => response.json(err))
+ })
  app.post("/add", (request, response) =>{
     const task = request.body.task;
     todoModel.create({
