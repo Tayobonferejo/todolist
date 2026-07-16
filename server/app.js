@@ -22,6 +22,12 @@
    .then(result => response.json(result))
    .catch(err => response.json(err))
  })
+
+ app.put("/update/:id", (request, response) => {
+    const {id} = request.params;
+    console.log(id)
+ })
+
  app.post("/add", (request, response) =>{
     const task = request.body.task;
     todoModel.create({
